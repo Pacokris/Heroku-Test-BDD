@@ -26,8 +26,8 @@ public class Users {
     @JsonProperty("username")
     private String username;
 
-    @JsonProperty("date")
+    @JsonProperty("created_on")
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy HH:mm:ss", timezone = "Europe/Paris")
     @Temporal(TemporalType.TIMESTAMP)
-    private Date date;
+    private Date created_on;
 }

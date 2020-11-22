@@ -28,4 +28,13 @@ public class ServiceUsers {
         return repository.findAll( pageRequest );
     }
 
+    /**
+     * Méthode pour ajouter un user.
+     *
+     * @param user Un utilisateur
+     * @return L'utilisateur ajouté
+     */
+    public Users saveUser(Users user) {
+        return repository.save( user );
+    }
 }

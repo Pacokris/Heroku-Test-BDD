@@ -14,4 +14,12 @@ public interface ProjetUserRepository extends JpaRepository<Users, Long> {
      * @return Une liste d'utilisateurs
      */
     Page<Users> findAll(Pageable pageable);
+
+    /**
+     * Méthode pour sauvegarder un utilisateur .
+     *
+     * @param user Un utilisateur
+     * @return L'utilisateur sauvegardé
+     */
+    Users save(Users user);
 }

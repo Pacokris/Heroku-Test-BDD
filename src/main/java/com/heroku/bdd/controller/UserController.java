@@ -17,7 +17,7 @@ import java.net.URI;
 @CrossOrigin
 @Slf4j
 @Validated
-@RequestMapping("user")
+@RequestMapping("/user")
 public class UserController {
 
     private final ServiceUsers serviceUsers;

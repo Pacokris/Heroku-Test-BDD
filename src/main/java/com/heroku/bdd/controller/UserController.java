@@ -12,6 +12,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import javax.validation.Valid;
 import java.net.URI;
+import java.util.Optional;
 
 @RestController
 @CrossOrigin
@@ -35,6 +36,18 @@ public class UserController {
     @GetMapping(value = "/allUsers")
     public Page<Users> findAllUsers() {
         return serviceUsers.listAll();
+    }
+
+    /**
+     * Permet de récupérer utilisateur par son identifiant.
+     *
+     * @param user_id Id d'un utilisateur
+     * @return Un utilisateur
+     */
+    @ResponseBody
+    @GetMapping(value = "/usersById")
+    public Optional<Users> getUserById(@RequestParam Long user_id) {
+        return serviceUsers.findById( user_id );
     }
 
     /**

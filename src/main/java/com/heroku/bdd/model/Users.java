@@ -21,7 +21,7 @@ public class Users {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @JsonProperty("user_id")
-    private int user_id;
+    private Long user_id;
 
     @JsonProperty("username")
     private String username;

@@ -7,6 +7,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 @Slf4j
 public class ServiceUsers {
@@ -26,6 +28,16 @@ public class ServiceUsers {
      */
     public Page<Users> listAll() {
         return repository.findAll( pageRequest );
+    }
+
+    /**
+     * Méthode pour récupérer un utilisateur par son id.
+     *
+     * @param user_id L'id de l'utilisateur
+     * @return Un utilisateur
+     */
+    public Optional<Users> findById(Long user_id) {
+        return repository.findById( user_id );
     }
 
     /**

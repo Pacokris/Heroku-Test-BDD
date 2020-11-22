@@ -3,9 +3,9 @@
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://ec2-54-217-236-206.eu-west-1.compute.amazonaws.com:5432/daadjg5q41p10e
-    username: uprsvkhztuuodr
-    password: 313d534298f3cb4afeaf458e1a14e9154eeac6823040edacff51c972c76455ea
+    url: jdbc:postgresql://ec2-52-31-94-195.eu-west-1.compute.amazonaws.com:5432/d2ptaklsnhlitn
+    username: tlhmprnzgwfyxu
+    password: ea2ec022530657f865bcba1260745e6e9a91c6f45648896462d5208a6cc6533c
   jpa:
     hibernate:
       ddl-auto: update # When you launch the application for the first time - switch "none" at "create"
